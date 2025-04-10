@@ -1,4 +1,4 @@
-name: Next.js CI
+name: Lex-Impact-FE CI
 
 on:
   push:
@@ -23,19 +23,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./frontend
+        working-directory: ./lex-impact
 
       - name: Lint
         run: npm run lint 
-        working-directory: ./frontend
+        working-directory: ./lex-impact
 
       - name: Build Next.js app
         run: npm build
-        working-directory: ./frontend
+        working-directory: ./lex-impact
 
       # - name: Run tests
       #   run: npm test 
-      # working-directory: ./frontend
+      # working-directory: ./lex-impact
 
       - name: ✅ All checks passed
         run: echo "Ready to merge!"
