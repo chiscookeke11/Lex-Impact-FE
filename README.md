@@ -28,7 +28,7 @@ git checkout -b issue-[issue-number]-[short-description]
 ## 🌳 Branching Strategy
 We follow the Git Flow model:
 - `main`: Stable production-ready code.
-- `develop`: Active development branch.
+- `dev`: Active development branch.
 - `issue/[issue-number]-[short-description]`: Branch for working on a specific issue.
 
 ## 📝 Commit Message Guidelines
@@ -40,10 +40,16 @@ chore: update dependencies
 ```
 ## Run Test Before Pushing Changes
 ```npm
-npm run build
+npm run lint      # Run linter (e.g., ESLint)
+npm run test      # Run tests (e.g., Jest, Mocha)
+npm run build     # Build the project (e.g., Next.js, React)
+
 ```
 ``` yarn
-yarn build
+yarn lint         # Run linter
+yarn test         # Run tests
+yarn build        # Build the project
+
 ```
 
 ## 🔄 Pushing Changes
@@ -56,7 +62,7 @@ git push origin issue-[issue-number]-[short-description]
 ## 🔀 Submitting a Pull Request (PR)
 1. Push your branch to the remote repository.
 2. Sync your code with the latest update.
-3. Open a PR against `develop`.
+3. Open a PR against `dev`.
 4. Ensure all tests pass.
 5. Request a review from the team.
 6. Address any feedback before merging.
